@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Comment section</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section__item">
+            <div class="counter">
+                <div class="increase__button">
+                    <button class="increaseButton">+</button>
+                </div>
+                <div class="counter__number">
+                    <p class="counterNumber">12</p>
+                </div>
+                <div class="decrease__number">
+                    <button class="decreaseNumber">-</button>
+                </div>
+            </div>
+            <div class="comment__info">
+                <div class="info__top">
+                    <div class="user">
+                        <div class="user__img">
+                            <img src="assets/img/user.png" alt="">
+                        </div>
+                        <div class="username">
+                            <p class="userName">amyrobson</p>
+                        </div>
+                        <div class="user__activity">
+                            <p>1 month ago</p>
+                        </div>
+                    </div>
+                    <div class="reply__button">
+                        <button class="reply"><img src="assets/img/reply.svg" alt=""> Reply</button>
+                    </div>
+                </div>
+                <div class="info__main">
+                    <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible.
+                        You’ve nailed the design and the responsiveness at various breakpoints works really well.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section__item">
+            <div class="counter">
+                <div class="increase__button">
+                    <button class="increaseButton">+</button>
+                </div>
+                <div class="counter__number">
+                    <p class="counter__number">5</p>
+                </div>
+                <div class="decrease__number">
+                    <button class="decreaseNumber">-</button>
+                </div>
+            </div>
+            <div class="comment__info">
+                <div class="info__top">
+                    <div class="user">
+                        <div class="user__img">
+                            <img src="assets/img/user2.png" alt="">
+                        </div>
+                        <div class="username">
+                            <p class="userName">maxblagun</p>
+                        </div>
+                        <div class="user__activity">
+                            <p>2 weeks ago</p>
+                        </div>
+                    </div>
+                    <div class="reply__button">
+                        <button class="reply"><img src="assets/img/reply.svg" alt=""> Reply</button>
+                    </div>
+                </div>
+                <div class="info__main">
+                    <p>Woah, your project looks awesome! How long have you been coding for? I’m still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="section__item">
+                <div class="counter">
+                    <div class="increase__button">
+                        <button class="increaseButton">+</button>
+                    </div>
+                    <div class="counter__number">
+                        <p class="counter__number">4</p>
+                    </div>
+                    <div class="decrease__number">
+                        <button class="decreaseNumber">-</button>
+                    </div>
+                </div>
+                <div class="comment__info">
+                    <div class="info__top">
+                        <div class="user">
+                            <div class="user__img">
+                                <img src="assets/img/user3.png" alt="">
+                            </div>
+                            <div class="username">
+                                <p class="userName">ramsesmiron</p>
+                            </div>
+                            <div class="user__activity">
+                                <p>1 week ago</p>
+                            </div>
+                        </div>
+                        <div class="reply__button">
+                            <button class="reply"><img src="assets/img/reply.svg" alt=""> Reply</button>
+                        </div>
+                    </div>
+                    <div class="info__main">
+                        <p><span>@maxblagun</span> If you’re still new, I’d recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It’s very tempting to jump ahead but lay a solid foundation first.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section__item">
+                <div class="counter">
+                    <div class="increase__button">
+                        <button>+</button>
+                    </div>
+                    <div class="counter__number">
+                        <p>2</p>
+                    </div>
+                    <div class="decrease__number">
+                        <button>-</button>
+                    </div>
+                </div>
+                <div class="comment__info">
+                    <div class="info__top">
+                        <div class="user">
+                            <div class="user__img">
+                                <img src="assets/img/main__user.png" alt="">
+                            </div>
+                            <div class="username">
+                                <p>juliusomo</p>
+                            </div>
+                            <div class="you__user">
+                                <p>you</p>
+                            </div>
+                            <div class="user__activity">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="delete__button">
+                                <button class="deleteBtn"><img src="assets/img/delete.svg" alt=""> Delete</button>
+                            </div>
+                            <div class="reply__button">
+                                <button class="edit"><img src="assets/img/edit.svg" alt=""> Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__main">
+                        <p><span>@ramsesmiron</span> I couldn’t agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__section"></div>
+        <div class="comment__form">
+            <form action="">
+                <div class="comment__user">
+                    <img src="assets/img/main__user.png" alt="">
+                </div>
+                <textarea placeholder="Add a comment…" id="textarea"></textarea>
+                <div class="send__button">
+                    <button type="submit" id="send">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
