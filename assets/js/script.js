@@ -39,6 +39,8 @@ form.addEventListener('submit', (e) => {
     if (textarea.value) {
         textarea.value = '';
     }
+
+    mainSection.appendChild(sectionItem);
 });
 
 // Reply button
@@ -104,14 +106,16 @@ replyButtons.forEach((el) => {
                             </div>
                         </div>
                         <div class="info__main">
-                            <p>${replyTextarea.value}</p>
+                            <p class='infoMain'>${replyTextarea.value}</p>
                         </div>
                     </div>
                 </div>`;
 
+            // createSectionItem();
+
             wrapper.appendChild(sectionItem);
             deleteSectionItem();
-            editSectionItem();
+            // editSectionItem();
 
             if (replyButton.click) {
                 replyEl.style.display = 'none';
@@ -124,7 +128,7 @@ replyButtons.forEach((el) => {
 
 // create Section Item function
 function createSectionItem() {
-    const sectionItem = document.createElement('div');
+    sectionItem = document.createElement('div');
 
     sectionItem.innerHTML = `
             <div class="section__item">
@@ -165,14 +169,21 @@ function createSectionItem() {
                         </div>
                     </div>
                     <div class="info__main">
-                        <p>${textarea.value}</p>
+                        <p class='infoMain'>${textarea.value}</p>
                     </div>
                 </div>
             </div>`;
 
-    mainSection.appendChild(sectionItem);
+    const deleteButtons = sectionItem.querySelectorAll('.deleteBtn');
+    deleteButtons.forEach((deleteButton) => {
+        deleteButton.addEventListener('click', () => {
+            const card =
+                deleteButton.parentElement.parentElement.parentElement
+                    .parentElement.parentElement;
+            card.style.display = 'none';
+        });
+    });
 
-    deleteSectionItem();
     editSectionItem();
 }
 
@@ -194,7 +205,29 @@ function editSectionItem() {
 
     editButtons.forEach((editButton) => {
         editButton.addEventListener('click', () => {
+            createSectionItem();
+            const box =
+                editButton.parentElement.parentElement.parentElement
+                    .parentElement;
 
+            const infoMain = document.querySelector('.infoMain');
+            // const infoContainer = sectionItem.querySelector('.info__main');
+            const updateButton = document.createElement('button');
+            // updateButton.textContent = 'Update';
+            // updateButton.className = 'button__update';
+
+            const editContainer = document.createElement('div');
+            editContainer.innerHTML = `
+                <div class="edit__textarea">
+                    <textarea></textarea>
+                </div>
+                <div class="update__button">
+                    <button>Update</button>
+                </div>
+            `;
+
+            box.appendChild(editContainer);
+            infoMain.style.display = 'none';
         });
     });
 }

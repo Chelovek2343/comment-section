@@ -55,6 +55,36 @@ a {
     color: inherit;
     text-decoration: none;
 }
+.update__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+    button {
+        width: 104px;
+        height: 48px;
+        background: #5357b6;
+        border-radius: 8px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+}
+
+.edit__textarea {
+    textarea {
+        background: #ffffff;
+        border: 1px solid #5357b6;
+        border-radius: 8px;
+        resize: none;
+        width: 530px;
+        height: 124px;
+    }
+}
 
 .container {
     width: 730px;
@@ -158,6 +188,8 @@ a {
                     -ms-flex-align: center;
                     align-items: center;
                     gap: 24px;
+                    -webkit-box-pack: end;
+                    -ms-flex-pack: end;
                     justify-content: flex-end;
 
                     .delete__button {
@@ -294,6 +326,8 @@ a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         background: #fff;
         padding: 24px;
